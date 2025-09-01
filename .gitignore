@@ -120,3 +120,5 @@ test-results/
 coverage/
 
 .serena
+.github
+.claude
