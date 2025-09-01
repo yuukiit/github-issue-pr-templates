@@ -11,54 +11,33 @@
 - ⚡ **TypeScript製** - 型安全で保守性の高いコードベース
 - 🎯 **カスタマイズ可能** - プロジェクトのニーズに応じて選択的インストール
 
-## インストール
-
-### npm経由でのインストール
-
-```bash
-npm install -g github-issue-pr-templates
-```
-
-### 直接実行（npx）
-
-```bash
-npx github-issue-pr-templates install
-```
-
 ## 使用方法
+
+インストール不要。`npx`で直接実行できます。
 
 ### 基本コマンド
 
 ```bash
 # インタラクティブインストール
-github-templates install
+npx github-issue-pr-templates install
 
 # 全テンプレートを一括インストール
-github-templates install --all
+npx github-issue-pr-templates install --all
 
 # 特定タイプのみインストール
-github-templates install --type bug,feature,typo
+npx github-issue-pr-templates install --type bug,feature,typo
 
 # Claude Code用設定も含めてインストール
-github-templates install --claude
+npx github-issue-pr-templates install --claude
 
 # 利用可能テンプレート一覧
-github-templates list
+npx github-issue-pr-templates list
 
 # テンプレート削除
-github-templates remove
+npx github-issue-pr-templates remove
 
 # テンプレート更新
-github-templates update
-```
-
-### エイリアス
-
-短縮コマンド `gh-templates` も利用できます：
-
-```bash
-gh-templates install --all
-gh-templates list
+npx github-issue-pr-templates update
 ```
 
 ## 提供テンプレート
@@ -87,7 +66,7 @@ gh-templates list
 
 ```bash
 # Claude Code用設定を含めてインストール
-github-templates install --claude
+npx github-issue-pr-templates install --claude
 ```
 
 このオプションにより以下が追加されます：
@@ -101,17 +80,17 @@ github-templates install --claude
 
 ```bash
 # バグレポートと機能要求のみ
-github-templates install --type bug,feature
+npx github-issue-pr-templates install --type bug,feature
 
 # ドキュメント関連のみ
-github-templates install --type documentation,typo
+npx github-issue-pr-templates install --type documentation,typo
 ```
 
 ### 既存ファイルの上書き
 
 ```bash
 # 確認なしで強制上書き
-github-templates install --force
+npx github-issue-pr-templates install --force
 ```
 
 ## プロジェクト構成
@@ -199,7 +178,7 @@ npm run typecheck
 テンプレートをプロジェクトにインストールします。
 
 ```bash
-github-templates install [options]
+npx github-issue-pr-templates install [options]
 ```
 
 **オプション：**
@@ -213,7 +192,7 @@ github-templates install [options]
 利用可能なテンプレート一覧を表示します。
 
 ```bash
-github-templates list
+npx github-issue-pr-templates list
 ```
 
 ### remove
@@ -221,7 +200,7 @@ github-templates list
 インストール済みテンプレートを削除します。
 
 ```bash
-github-templates remove [options]
+npx github-issue-pr-templates remove [options]
 ```
 
 ### update
@@ -229,18 +208,15 @@ github-templates remove [options]
 既存テンプレートを最新版に更新します。
 
 ```bash
-github-templates update
+npx github-issue-pr-templates update
 ```
 
 ## トラブルシューティング
 
-### 権限エラー
+### パッケージの実行エラー
 
 ```bash
-# グローバルインストール時の権限問題
-sudo npm install -g github-issue-pr-templates
-
-# またはnpxを使用
+# 初回実行時にダウンロードされます
 npx github-issue-pr-templates install
 ```
 
@@ -248,17 +224,17 @@ npx github-issue-pr-templates install
 
 ```bash
 # 強制上書きで解決
-github-templates install --force
+npx github-issue-pr-templates install --force
 ```
 
-### パッケージが見つからない
+### npm cacheの問題
 
 ```bash
 # npm cacheをクリア
 npm cache clean --force
 
-# 再インストール
-npm install -g github-issue-pr-templates
+# 再実行
+npx github-issue-pr-templates install
 ```
 
 ## コントリビューション
