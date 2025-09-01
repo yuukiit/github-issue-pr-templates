@@ -62,8 +62,7 @@ github-issue-pr-templates/
 │   │   └── typo_fix.md
 │   ├── pull_request_template.md
 │   ├── claude/
-│   │   └── templates.md
-│   └── contributing.md
+│       └── templates.md
 └── scripts/
     └── postinstall.js
 ```

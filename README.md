@@ -59,7 +59,6 @@ npx github-issue-pr-templates update
 
 ### 追加ファイル
 
-- **contributing.md** - コントリビューションガイド
 - **Claude Code連携設定** - AI開発環境用のテンプレートガイド
 
 ## Claude Code との連携
@@ -109,31 +108,7 @@ your-project/
 │   │   └── typo_fix.md
 │   └── pull_request_template.md
 ├── .claude/                    # --claude オプション時のみ
-│   └── templates.md
-└── contributing.md
-```
-
-## 開発環境のセットアップ
-
-```bash
-# リポジトリのクローン
-git clone https://github.com/your-username/github-issue-pr-templates.git
-cd github-issue-pr-templates
-
-# 依存関係のインストール
-npm install
-
-# 開発モードで起動
-npm run dev
-
-# ビルド
-npm run build
-
-# テスト実行
-npm test
-
-# 型チェック
-npm run typecheck
+    └── templates.md
 ```
 
 ## テンプレート例
@@ -237,34 +212,8 @@ npm cache clean --force
 npx github-issue-pr-templates install
 ```
 
-## コントリビューション
-
-プロジェクトへの貢献を歓迎します！
-
-1. リポジトリをフォーク
-2. フィーチャーブランチを作成 (`git checkout -b feature/amazing-feature`)
-3. 変更をコミット (`git commit -m 'feat: add amazing feature'`)
-4. ブランチをプッシュ (`git push origin feature/amazing-feature`)
-5. プルリクエストを作成
-
-詳細は [CONTRIBUTING.md](contributing.md) をご確認ください。
-
-## ライセンス
-
-MIT License - 詳細は [LICENSE](LICENSE) ファイルをご確認ください。
-
-## サポート
-
-- 🐛 バグ報告: [Issues](../../issues)
-- 💡 機能要求: [Issues](../../issues) 
-- 💬 質問・相談: [Discussions](../../discussions)
-
 ## 関連リンク
 
 - [GitHub Issues について](https://docs.github.com/ja/issues)
 - [プルリクエストについて](https://docs.github.com/ja/pull-requests)
 - [Claude Code](https://claude.ai/code)
-
----
-
-**Made with ❤️ for Japanese developers**
