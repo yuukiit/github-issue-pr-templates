@@ -143,7 +143,7 @@ export const removeTemplates = async (options: RemoveOptions): Promise<void> => 
     
     if (templatesToRemove.length === 0) {
       console.error(chalk.red('❌ 指定されたタイプのテンプレートが見つかりません'));
-      console.log(chalk.gray('利用可能なタイプ: bug, feature, typo, question, documentation, performance, pr, contributing, claude'));
+      console.log(chalk.gray('利用可能なタイプ: bug, feature, typo, question, documentation, performance, pr, claude'));
       return;
     }
   } else {

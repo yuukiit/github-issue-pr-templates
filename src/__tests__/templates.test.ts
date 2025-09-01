@@ -19,9 +19,9 @@ describe('Templates', () => {
       );
     });
 
-    test('OTHER_TEMPLATES should contain PR and contributing templates', () => {
-      expect(OTHER_TEMPLATES).toHaveLength(2);
-      expect(OTHER_TEMPLATES.map(t => t.type)).toEqual(['pr', 'contributing']);
+    test('OTHER_TEMPLATES should contain PR template', () => {
+      expect(OTHER_TEMPLATES).toHaveLength(1);
+      expect(OTHER_TEMPLATES.map(t => t.type)).toEqual(['pr']);
     });
 
     test('CLAUDE_TEMPLATES should contain claude template', () => {
@@ -33,7 +33,7 @@ describe('Templates', () => {
   describe('getAllTemplates', () => {
     test('should return all templates combined', () => {
       const allTemplates = getAllTemplates();
-      expect(allTemplates).toHaveLength(9); // 6 + 2 + 1
+      expect(allTemplates).toHaveLength(8); // 6 + 1 + 1
       expect(allTemplates).toEqual([...TEMPLATE_CONFIGS, ...OTHER_TEMPLATES, ...CLAUDE_TEMPLATES]);
     });
   });
@@ -116,7 +116,6 @@ describe('Templates', () => {
 
     test('should return "other" for unknown template type', () => {
       expect(getTemplateType('unknown')).toBe('other');
-      expect(getTemplateType('contributing')).toBe('other');
     });
   });
 
@@ -126,7 +125,6 @@ describe('Templates', () => {
       expect(isValidTemplateType('feature')).toBe(true);
       expect(isValidTemplateType('pr')).toBe(true);
       expect(isValidTemplateType('claude')).toBe(true);
-      expect(isValidTemplateType('contributing')).toBe(true);
     });
 
     test('should return false for invalid template types', () => {

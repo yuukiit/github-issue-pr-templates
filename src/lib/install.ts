@@ -75,11 +75,6 @@ const selectTemplatesInteractively = async (): Promise<TemplateInfo[]> => {
       checked: true
     },
     {
-      name: '📚 コントリビューションガイド',
-      value: 'contributing',
-      checked: true
-    },
-    {
       name: '🤖 Claude Code連携設定',
       value: 'claude',
       checked: false
@@ -132,9 +127,6 @@ const selectTemplatesInteractively = async (): Promise<TemplateInfo[]> => {
     selectedTemplates.push(OTHER_TEMPLATES.find(t => t.type === 'pr')!);
   }
   
-  if (selectedGroups.includes('contributing')) {
-    selectedTemplates.push(OTHER_TEMPLATES.find(t => t.type === 'contributing')!);
-  }
   
   if (selectedGroups.includes('claude')) {
     selectedTemplates.push(...CLAUDE_TEMPLATES);
@@ -167,7 +159,7 @@ export const installTemplates = async (options: InstallOptions): Promise<void> =
     
     if (templatesToInstall.length === 0) {
       console.error(chalk.red('❌ 指定されたタイプのテンプレートが見つかりません'));
-      console.log(chalk.gray('利用可能なタイプ: bug, feature, typo, question, documentation, performance, pr, contributing, claude'));
+      console.log(chalk.gray('利用可能なタイプ: bug, feature, typo, question, documentation, performance, pr, claude'));
       return;
     }
   } else {

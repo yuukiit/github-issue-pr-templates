@@ -47,12 +47,6 @@ export const OTHER_TEMPLATES: TemplateInfo[] = [
     file: 'pull_request_template.md',
     type: 'pr',
     description: 'プルリクエスト作成時のテンプレート'
-  },
-  {
-    name: 'コントリビューション',
-    file: 'contributing.md',
-    type: 'contributing',
-    description: 'プロジェクトへの貢献方法を説明するドキュメント'
   }
 ];
 

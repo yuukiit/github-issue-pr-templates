@@ -111,8 +111,7 @@ describe('Type definitions', () => {
         'performance',
         'typo',
         'pr',
-        'claude',
-        'contributing'
+        'claude'
       ];
       
       validTypes.forEach(type => {

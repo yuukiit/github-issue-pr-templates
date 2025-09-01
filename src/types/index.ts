@@ -28,7 +28,7 @@ export interface UpdateOptions {
   force?: boolean;
 }
 
-export type TemplateType = 'bug' | 'feature' | 'question' | 'documentation' | 'performance' | 'typo' | 'pr' | 'claude' | 'contributing';
+export type TemplateType = 'bug' | 'feature' | 'question' | 'documentation' | 'performance' | 'typo' | 'pr' | 'claude';
 
 export interface TemplateConfig {
   sourceDir: string;
